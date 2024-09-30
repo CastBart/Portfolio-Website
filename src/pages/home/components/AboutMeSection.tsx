@@ -3,7 +3,7 @@ import profileImage from "../../../assets/profileImagejpg.jpg";
 
 export default function AboutMe() : React.ReactNode {
   return (
-    <section id="about_me">
+    <section id="about_me" className="flex min-h-screen items-center justify-center">
       <div className="flex flex-col justify-center items-center p-4">
         <h1 className="text-4xl font-bold p-4">Bartosz Zych</h1>
         <div className="flex flex-col lg:flex-row justify-center items-center">
