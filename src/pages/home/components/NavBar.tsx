@@ -8,31 +8,13 @@ const navItems: NavBarItem[] = [
   { id: "4", href: "#workoutplans", text: "Contact me" },
 ];
 
-export default function NavBar() : React.ReactNode {
+export default function NavBar(): React.ReactNode {
   const [nav, setNav] = useState(true);
   function handleNav() {
     setNav(!nav);
   }
   return (
-    <nav id="nav_bar" className="flex items-center justify-between p-2">
-      <div>Logo</div>
-      <ul className="hidden lg:flex space-x-10 ">
-        {navItems.map((item) => {
-          return (
-            <li className="hover:shadow-2xl shadow-white">
-              <a
-                className="p-2 no-underline hover:text-white text-white"
-                href={item.href}
-                id={item.id}
-              >
-                {item.text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <div>Mode</div>
-    <nav id="nav_bar" className="fixed top-0 w-full p-2">
+    <nav id="nav_bar" className="fixed w-full top-0 p-2">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="p-2 text-sm uppercase">Logo</div>
@@ -40,7 +22,10 @@ export default function NavBar() : React.ReactNode {
         <ul className="hidden items-center space-x-10 text-sm uppercase lg:flex ">
           {navItems.map((item) => {
             return (
-              <li key={item.id} className="cursor-pointer rounded-md p-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white">
+              <li
+                key={item.id}
+                className="cursor-pointer rounded-md p-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white"
+              >
                 <a className="" href={item.href}>
                   {item.text}
                 </a>
@@ -72,18 +57,25 @@ export default function NavBar() : React.ReactNode {
           </div>
         </div>
       </div>
-        {/* Mobile NavBar */}
-        <ul className={`lg:hidden flex z-0 flex-col fixed pt-9 bg-[#3a3838] w-[60%] h-full justify-start items-center space-y-10 text-sm rounded-l-3xl uppercase ease-in-out duration-500 top-0 ${nav ? '-right-[100%]' : 'right-0'}`}>
-          {navItems.map((item) => {
-            return (
-              <li key={item.id} className="cursor-pointer rounded-md p-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white">
-                <a className="" href={item.href} id={item.id}>
-                  {item.text}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+      {/* Mobile NavBar */}
+      <ul
+        className={`lg:hidden flex z-0 flex-col fixed pt-9 bg-[#3a3838] w-[60%] h-full justify-start items-center space-y-10 text-sm rounded-l-3xl uppercase ease-in-out duration-500 top-0 ${
+          nav ? "-right-[100%]" : "right-0"
+        }`}
+      >
+        {navItems.map((item) => {
+          return (
+            <li
+              key={item.id}
+              className="cursor-pointer rounded-md p-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white"
+            >
+              <a className="" href={item.href} id={item.id}>
+                {item.text}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
-};
+}

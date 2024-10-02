@@ -12,7 +12,7 @@ export default function AboutMe() : React.ReactNode {
             src={profileImage}
             alt="Image"
           />
-          <p className="w-[450px] md:w-[600px] p-4">
+          <p className="text-center lg:text-left md:w-[600px] p-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et
             elementum purus. Aliquam semper maximus nulla ac aliquam. Quisque
             porta rhoncus est. Nulla in lacus lacinia, consequat purus at,
