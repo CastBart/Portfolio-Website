@@ -2,10 +2,10 @@ import { NavBarItem } from "../../../lib/definitions";
 import React, { useState } from "react";
 
 const navItems: NavBarItem[] = [
-  { id: "1", href: "#about_me", text: "About me" },
-  { id: "2", href: "#projects", text: "Projects" },
-  { id: "3", href: "#experiance", text: "Experiance" },
-  { id: "4", href: "#contact_me", text: "Contact me" },
+  { id: "1", href: "#caloriecalculator", text: "About me" },
+  { id: "2", href: "#exercises", text: "Projects" },
+  { id: "3", href: "#singleworkouts", text: "Experiance" },
+  { id: "4", href: "#workoutplans", text: "Contact me" },
 ];
 
 export default function NavBar() : React.ReactNode {
@@ -14,6 +14,24 @@ export default function NavBar() : React.ReactNode {
     setNav(!nav);
   }
   return (
+    <nav id="nav_bar" className="flex items-center justify-between p-2">
+      <div>Logo</div>
+      <ul className="hidden lg:flex space-x-10 ">
+        {navItems.map((item) => {
+          return (
+            <li className="hover:shadow-2xl shadow-white">
+              <a
+                className="p-2 no-underline hover:text-white text-white"
+                href={item.href}
+                id={item.id}
+              >
+                {item.text}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <div>Mode</div>
     <nav id="nav_bar" className="fixed top-0 w-full p-2">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}

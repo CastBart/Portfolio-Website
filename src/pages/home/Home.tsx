@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 
 export default function Home(): React.ReactNode {
   return (
-    <main className="">
+    <main className="w-full container mx-auto">
       <NavBar />
       <AboutMe />
     </main>
