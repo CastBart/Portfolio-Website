@@ -67,9 +67,9 @@ export default function NavBar(): React.ReactNode {
           return (
             <li
               key={item.id}
-              className="cursor-pointer rounded-md p-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white"
+              className="card-wrapper cursor-pointer w-3/4 text-center rounded-md py-2 transition-shadow duration-300 ease-in-out hover:shadow-sm hover:shadow-white"
             >
-              <a className="" href={item.href} id={item.id}>
+              <a className="card-content" href={item.href} id={item.id}>
                 {item.text}
               </a>
             </li>

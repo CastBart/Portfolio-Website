@@ -7,6 +7,16 @@ export default {
         'nav-link-shadow': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       }
     },
+    keyframes: {
+      'border-spin': {
+        '100%': {
+          transform: 'rotate(-360deg)',
+        },
+      },
+    },
+    animation: {
+      'border-spin': 'border-spin 7s linear infinite',
+    },
   },
   plugins: [],
 }
