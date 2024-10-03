@@ -79,11 +79,11 @@ button:focus-visible {
       transparent 80deg
     );
 
-    @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
+    @apply absolute left-[-25%] top-[-600%] h-[1300%] w-[150%] animate-border-spin content-[''];
   }
 
   /* Body */
   .card-content {
-    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;
+   /* @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;*/
   }
 }
