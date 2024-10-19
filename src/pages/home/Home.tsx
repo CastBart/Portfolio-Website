@@ -1,5 +1,5 @@
 import React from "react";
-import AboutMe from "./components/AboutMeSection";
+import AboutMe from "./sections/aboutme/AboutMeSection";
 import NavBar from "./components/NavBar";
 
 export default function Home(): React.ReactNode {

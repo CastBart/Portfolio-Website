@@ -1,4 +1,4 @@
-import profileImage from "../../../assets/profileImagejpg.jpg";
+import profileImage from "../../../../assets/profileImagejpg.jpg";
 
 
 export default function AboutMe() : React.ReactNode {
