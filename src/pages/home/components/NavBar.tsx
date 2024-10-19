@@ -2,10 +2,10 @@ import { NavBarItem } from "../../../lib/definitions";
 import React, { useState } from "react";
 
 const navItems: NavBarItem[] = [
-  { id: "1", href: "#caloriecalculator", text: "About me" },
-  { id: "2", href: "#exercises", text: "Projects" },
-  { id: "3", href: "#singleworkouts", text: "Experiance" },
-  { id: "4", href: "#workoutplans", text: "Contact me" },
+  { id: "1", href: "#about_me", text: "About me" },
+  { id: "2", href: "#projects", text: "Projects" },
+  { id: "3", href: "#experiance", text: "Experiance" },
+  { id: "4", href: "#contact_me", text: "Contact me" },
 ];
 
 export default function NavBar(): React.ReactNode {
@@ -59,23 +59,18 @@ export default function NavBar(): React.ReactNode {
       </div>
       {/* Mobile NavBar */}
       <ul
-        className={`lg:hidden flex z-0 flex-col fixed pt-9 bg-[#3a3838] w-[60%] h-full justify-start items-center space-y-10 text-sm rounded-l-3xl uppercase ease-in-out duration-500 top-0 ${
+        className={`lg:hidden flex overflow-scroll z-0 flex-col fixed pt-12 bg-[#3a3838] w-[60%] h-full justify-start items-center space-y-2 text-sm rounded-l-3xl uppercase ease-in-out duration-500 top-0 ${
           nav ? "-right-[100%]" : "right-0"
         }`}
       >
         {navItems.map((item) => {
           return (
-            <li
-              key={item.id}
-              className="cursor-pointer w-3/4 text-center"
-            >
-              <a
-                className="flex items-center justify-center"
-                href={item.href}
-                id={item.id}
-              >
-                <div className="card-wrapper w-full h-9">
-                  <div className="card-content ">{item.text}</div>
+            <li key={item.id} className="cursor-pointer w-3/4 h-14">
+              <a className="h-full" href={item.href} id={item.id}>
+                <div className="card-wrapper w-full h-full">
+                  <div className="card-content flex items-center justify-center">
+                    <div className="">{item.text}</div>
+                  </div>
                 </div>
               </a>
             </li>

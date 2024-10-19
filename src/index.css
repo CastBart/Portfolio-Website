@@ -72,7 +72,7 @@ button:focus-visible {
   }
 
   /* Gradient */
-  .card-wrapper::before {
+  .card-wrapper::before:hover {
     background: conic-gradient(
       rgba(244, 114, 182, 0.4) 0deg,
       rgba(192, 132, 252, 0.4) 0deg,
@@ -84,6 +84,6 @@ button:focus-visible {
 
   /* Body */
   .card-content {
-   /* @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;*/
+    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;
   }
 }
