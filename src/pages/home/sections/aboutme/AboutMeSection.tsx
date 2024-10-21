@@ -3,8 +3,8 @@ import profileImage from "../../../../assets/profileImagejpg.jpg";
 
 export default function AboutMe() : React.ReactNode {
   return (
-    <section id="about_me">
-      <div className="flex flex-col justify-center items-center p-4">
+    <div id="about_me" className="pt-12 min-h-screen flex justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold p-4">Bartosz Zych</h1>
         <div className="flex flex-col lg:flex-row justify-center items-center">
           <img
@@ -23,6 +23,6 @@ export default function AboutMe() : React.ReactNode {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

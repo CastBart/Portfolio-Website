@@ -59,14 +59,14 @@ export default function NavBar(): React.ReactNode {
       </div>
       {/* Mobile NavBar */}
       <ul
-        className={`lg:hidden flex overflow-scroll z-0 flex-col fixed pt-12 bg-[#242424] border-[#413f3f] border-l-2 border-y-2 w-[60%] h-5/6 self-center justify-start items-center space-y-2 text-sm rounded-l-3xl uppercase ease-in-out duration-500 ${
+        className={`lg:hidden flex overflow-scroll z-0 flex-col fixed pt-12 bg-[#242424] border-[#413f3f] border-l-2 border-y-2 w-[60%] h-full justify-start items-center space-y-6 text-sm rounded-l-3xl uppercase ease-in-out duration-500 ${
           nav ? "-right-[100%]" : "right-0"
         }`}
       >
         {navItems.map((item) => {
           return (
-            <li key={item.id} className="cursor-pointer w-3/4">
-              <a className="h-full" href={item.href} id={item.id}>
+            <li key={item.id} className="cursor-pointer w-3/4 h-10 flex justify-center items-center border-b border-[#413f3f]">
+              <a className="font-bold" href={item.href} id={item.id}>
                 {item.text}
               </a>
             </li>
