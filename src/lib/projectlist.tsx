@@ -16,4 +16,19 @@ export const projects: Project[] = [
     shotDesc: "Personal PT profile",
     id: "proj-3",
   },
+  {
+    title: "Test1",
+    shotDesc: "Personal PT profile",
+    id: "proj-4",
+  },
+  {
+    title: "Test2",
+    shotDesc: "Personal PT profile",
+    id: "proj-5",
+  },
+  {
+    title: "Test3",
+    shotDesc: "Personal PT profile",
+    id: "proj-6",
+  },
 ];
