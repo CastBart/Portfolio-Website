@@ -1,15 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../../../../lib/projectlist";
 import { ProjectCard } from "./components/ProjectCard";
 
 export default function Projects(): React.ReactNode {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const cardWidth = 300; // Each card has a width of 300px
-  const visibleCards = 3;
-
-  // The maximum index we can scroll to
+  const [visibleCards, setVisibleCards] = useState(3); // Default to 3 for desktop
+  
+  // Calculate max index dynamically
   const maxIndex = projects.length - visibleCards;
+
+  // Handle screen resize to adjust visible cards
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCards(1); // 1 item visible on mobile
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2); // 2 items visible on tablet
+      } else {
+        setVisibleCards(3); // 3 items visible on desktop
+      }
+    };
+
+    updateVisibleCards(); // Set initial value
+    window.addEventListener("resize", updateVisibleCards); // Listen for window resize
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleCards);
+    };
+  }, []);
 
   const handlePrev = () => {
     if (currentIndex > 0 && !animating) {
@@ -46,12 +65,12 @@ export default function Projects(): React.ReactNode {
           </button>
 
           {/* Project Cards Container */}
-          <div className="relative w-[900px] overflow-hidden">
+          <div className="relative w-[300px] sm:w-[600px] lg:w-[900px] overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * cardWidth}px)`,
-                width: `${projects.length * cardWidth}px`,
+                transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`,
+               // width: `${projects.length * (100 / visibleCards)}%`, // Corrected width
               }}
             >
               {projects.map((project, index) => {
@@ -62,7 +81,7 @@ export default function Projects(): React.ReactNode {
                 return (
                   <div
                     key={project.id}
-                    className={`w-[300px] flex justify-center flex-shrink-0 transition-opacity duration-500 ease-in-out ${
+                    className={`w-[100%] sm:w-[50%] lg:w-[33.33%] flex justify-center flex-shrink-0 transition-opacity duration-500 ease-in-out ${
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                     style={{
