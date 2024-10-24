@@ -5,7 +5,7 @@ import Projects from "./sections/projects/Projects";
 
 export default function Home(): React.ReactNode {
   return (
-    <main className="">
+    <main>
       <NavBar />
       <AboutMe />
       <Projects />
