@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../../../../lib/projectlist";
 import { ProjectCard } from "./components/ProjectCard";
+import { ProjectDialog } from "./components/ProjectDialog";
+import { Project } from "../../../../lib/definitions";
 
 export default function Projects(): React.ReactNode {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [visibleCards, setVisibleCards] = useState(3); // Default to 3 for desktop
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null); // State for the selected project
+  const [isDialogOpen, setIsDialogOpen] = useState(false); // State for dialog visibility
 
   // Calculate max index dynamically
   const maxIndex = projects.length - visibleCards;
@@ -50,11 +54,20 @@ export default function Projects(): React.ReactNode {
     }
   };
 
+  const handleOpenDialog = (project: Project) => {
+    setSelectedProject(project);
+    setIsDialogOpen(true);
+    document.body.classList.add('overflow-hidden'); // Disable page scroll
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    setSelectedProject(null);
+    document.body.classList.remove('overflow-hidden'); // Re-enable page scroll
+  };
+
   return (
-    <section
-      id="projects"
-      className="min-h-screen flex justify-center items-center"
-    >
+    <section id="projects" className="min-h-screen flex justify-center items-center">
       <div className="flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 pb-10">Projects</h1>
         <div className="flex items-center space-x-4">
@@ -72,16 +85,12 @@ export default function Projects(): React.ReactNode {
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${
-                  (currentIndex * 100) / visibleCards
-                }%)`,
-                // width: `${projects.length * (100 / visibleCards)}%`, // Corrected width
+                transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`,
               }}
             >
               {projects.map((project, index) => {
                 // Determine if the project is visible
-                const isVisible =
-                  index >= currentIndex && index < currentIndex + visibleCards;
+                const isVisible = index >= currentIndex && index < currentIndex + visibleCards;
 
                 return (
                   <div
@@ -93,7 +102,7 @@ export default function Projects(): React.ReactNode {
                       transitionProperty: "opacity, transform",
                     }}
                   >
-                    <ProjectCard project={project} />
+                    <ProjectCard project={project} onMoreClick={handleOpenDialog} />
                   </div>
                 );
               })}
@@ -110,6 +119,15 @@ export default function Projects(): React.ReactNode {
           </button>
         </div>
       </div>
+
+      {/* Render the ProjectDialog only if a project is selected */}
+      {selectedProject && (
+        <ProjectDialog
+          isOpen={isDialogOpen}
+          onClose={handleCloseDialog}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 }

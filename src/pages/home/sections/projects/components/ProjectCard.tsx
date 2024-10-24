@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Project } from "../../../../../lib/definitions"; // Import your Project type
-import { ProjectDialog } from "./ProjectDialog"; // Import the renamed ProjectDialog component
 
-export function ProjectCard({ project }: { project: Project }): React.ReactNode {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+interface ProjectCardProps {
+  project: Project;
+  onMoreClick: (project: Project) => void; // Callback for the "More" button
+}
 
-  const handleOpenDialog = () => {
-    setIsDialogOpen(true);
-  };
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-  };
-
+export function ProjectCard({ project, onMoreClick }: ProjectCardProps): React.ReactNode {
   return (
     <div className="w-56 min-h-[350px] flex flex-col items-center p-4 border border-[#413f3f] rounded-lg">
       <h3 className="font-bold pb-6">{project.title}</h3>
@@ -30,17 +24,10 @@ export function ProjectCard({ project }: { project: Project }): React.ReactNode 
       {/* "More" button to open the dialog */}
       <button
         className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-        onClick={handleOpenDialog}
+        onClick={() => onMoreClick(project)} // Trigger the dialog from the parent component
       >
         More
       </button>
-
-      {/* Pass the whole project to the ProjectDialog */}
-      <ProjectDialog
-        isOpen={isDialogOpen}
-        onClose={handleCloseDialog}
-        project={project} // Pass the entire project object
-      />
     </div>
   );
 }
