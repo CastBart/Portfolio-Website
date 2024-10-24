@@ -8,6 +8,14 @@ export type NavBarItem = {
 // Project Definition
   export interface Project {
     title: string,
-    shotDesc: string,
     id: string,
+    shotDesc: string,
+    longDesc: string,
+}
+
+//Project Dialog
+export interface ProjectDialogProps {
+  isOpen: boolean;
+  onClose: () => void;
+  project: Project; // The entire project object
 }
