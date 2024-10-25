@@ -40,7 +40,7 @@ export default function Projects(): React.ReactNode {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => prevIndex - 1);
         setAnimating(false);
-      }, 500);
+      }, 100);
     }
   };
 
@@ -50,7 +50,7 @@ export default function Projects(): React.ReactNode {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => prevIndex + 1);
         setAnimating(false);
-      }, 500);
+      }, 100);
     }
   };
 
@@ -75,7 +75,7 @@ export default function Projects(): React.ReactNode {
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0 || animating}
-            className="p-2 bg-gray-300 rounded disabled:opacity-50"
+            className="p-2 bg-[#3b82f6] rounded disabled:opacity-50"
           >
             {"<"}
           </button>
@@ -113,7 +113,7 @@ export default function Projects(): React.ReactNode {
           <button
             onClick={handleNext}
             disabled={currentIndex >= maxIndex || animating}
-            className="p-2 bg-gray-300 rounded disabled:opacity-50"
+            className="p-2 bg-[#3b82f6] rounded disabled:opacity-50"
           >
             {">"}
           </button>
