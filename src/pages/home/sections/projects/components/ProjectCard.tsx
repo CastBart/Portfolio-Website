@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onMoreClick }: ProjectCardProps): React.ReactNode {
   return (
-    <div className="w-56 min-h-[350px] flex flex-col items-center p-4 border border-[#413f3f] rounded-lg">
+    <div className="w-56 min-h-[350px] flex flex-col items-center p-4 border border-[#413f3f] rounded-lg z-20">
       <h3 className="font-bold pb-6">{project.title}</h3>
 
       {/* Placeholder for project image or icon */}
