@@ -55,7 +55,7 @@ export default function NavBar(): React.ReactNode {
   }, [activeItem, scrollLock]);
 
   return (
-    <nav id="nav_bar" className="fixed w-full top-0 p-2">
+    <nav id="nav_bar" className="fixed w-full top-0 p-2 z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="p-2 text-sm uppercase">Logo</div>
@@ -84,7 +84,7 @@ export default function NavBar(): React.ReactNode {
         <div className="hidden lg:block p-2 text-sm uppercase">Mode</div>
 
         {/* Hamburger menu */}
-        <div className="lg:hidden z-10" onClick={handleNav}>
+        <div className="lg:hidden" onClick={handleNav}>
           <div className="flex flex-col h-8 w-8 ms-center justify-center space-y-1 transition-all duration-300 ease-in-out transform">
             <div
               className={`w-6 h-0.5 bg-white transition-all duration-200 ease-in-out transform ${

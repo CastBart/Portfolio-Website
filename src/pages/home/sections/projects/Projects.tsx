@@ -69,7 +69,7 @@ export default function Projects(): React.ReactNode {
   return (
     <section
       id="projects"
-      className="min-h-screen flex justify-center items-center z-10 relative"
+      className="min-h-screen flex justify-center items-center z-10"
     >
       <div className="flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 pb-10">Projects</h1>
@@ -86,7 +86,7 @@ export default function Projects(): React.ReactNode {
           {/* Project Cards Container */}
           <div className="w-[300px] sm:w-[600px] lg:w-[900px] overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out relative"
+              className="flex transition-transform duration-500 ease-in-out relative z-10"
               style={{
                 transform: `translateX(-${
                   (currentIndex * 100) / visibleCards
@@ -104,7 +104,7 @@ export default function Projects(): React.ReactNode {
                       isVisible ? "opacity-100" : "opacity-0"
                     }`}
                     style={{
-                      zIndex: isVisible ? 10 : 0,
+                      zIndex: isVisible ? 20 : 0,
                     }}
                   >
                     <ProjectCard
