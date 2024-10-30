@@ -8,6 +8,7 @@ export default function Experiance(): React.ReactNode {
     >
       <div className="flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 pb-10">Profesional Experiance</h1>
+        <div></div>
       </div>
     </section>
   );
