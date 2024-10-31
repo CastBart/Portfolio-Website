@@ -20,7 +20,7 @@ export interface ProjectDialogProps {
   project: Project; // The entire project object
 }
 
-export interface Experiance{
+export interface ExperienceType{
   company: string;
   position: string;
   from: Date;

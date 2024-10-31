@@ -1,6 +1,6 @@
-import { Experiance } from "./definitions";
+import { ExperienceType } from "./definitions";
 
-export const experienceList: Experiance[] = [
+export const experienceList: ExperienceType[] = [
   {
     company: "Kianda Technologies",
     position: "Low-code Automation Developer",
