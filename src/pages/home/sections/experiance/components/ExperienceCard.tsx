@@ -11,23 +11,43 @@ export function ExperienceCard({
   onMoreClick,
 }: ExperienceCardProps): React.ReactNode {
   return (
-    <div className="w-[300px] p-4 border border-gray-300 rounded-lg">
-      <h3 className="font-bold">{experience.company}</h3>
+    <div className="w-[400px] h-[400px] flex flex-col items-center p-2 border border-[#413f3f] rounded-lg">
+      <h2 className="font-bold pb-2">{experience.company}</h2>
       <p>{experience.position}</p>
       <p>
-        {experience.from.toLocaleDateString()} -{" "}
+        {experience.from.toLocaleDateString("en-GB", {
+          month: "short",
+          year: "numeric",
+        })}{" "}
+        -{" "}
         {experience.to instanceof Date
-          ? experience.to.toLocaleDateString("en-GB") // Format to dd/mm/yyyy
+          ? experience.to.toLocaleDateString("en-GB", {
+              month: "short",
+              year: "numeric",
+            })
           : experience.to}{" "}
       </p>
-      <ul>
-        {experience.technicalSkills.map((point, index) => (
-          <li key={index}>- {point}</li>
-        ))}
-      </ul>
+      <div className="w-full flex flex-grow p-2">
+        <div className="w-1/2 p-2">
+          <h3 className="font-bold">Technical Skills</h3>
+          <ul>
+            {experience.technicalSkills.map((point, index) => (
+              <li key={index}>- {point}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-1/2 p-2">
+          <h3 className="font-bold">Technologies</h3>
+          <ul>
+            {experience.technicalSkills.map((point, index) => (
+              <li key={index}>- {point}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <button
         onClick={() => onMoreClick(experience)}
-        className="bg-blue-500 text-white py-2 px-4 rounded mt-4"
+        className="bg-blue-500 text-white py-2 px-4 rounded mt-auto"
       >
         More
       </button>
