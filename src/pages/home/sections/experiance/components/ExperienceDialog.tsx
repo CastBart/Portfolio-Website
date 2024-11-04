@@ -11,8 +11,8 @@ export function ExperienceDialog({
   onClose,
 }: ExperienceDialogProps): React.ReactNode {
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-[60]">
+      <div className="bg-[#242424] p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3">
         <h3 className="font-bold text-xl">{experience.company}</h3>
         <p>{experience.position}</p>
         <p>
@@ -21,14 +21,15 @@ export function ExperienceDialog({
             ? experience.to.toLocaleDateString("en-GB") // Format to dd/mm/yyyy
             : experience.to}{" "}
         </p>
+        <p>{experience.description}</p>
         <ul>
-          {experience.technicalSkills.map((point, index) => (
+          {experience.skills.map((point, index) => (
             <li key={index}>- {point}</li>
           ))}
         </ul>
         <button
           onClick={onClose}
-          className="bg-red-500 text-white py-2 px-4 rounded mt-4"
+          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
         >
           Close
         </button>

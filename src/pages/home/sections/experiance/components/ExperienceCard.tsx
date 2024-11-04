@@ -29,9 +29,9 @@ export function ExperienceCard({
       </p>
       <div className="w-full flex flex-grow p-2">
         <div className="w-1/2 p-2">
-          <h3 className="font-bold">Technical Skills</h3>
+          <h3 className="font-bold">Skills</h3>
           <ul>
-            {experience.technicalSkills.map((point, index) => (
+            {experience.skills.map((point, index) => (
               <li key={index}>- {point}</li>
             ))}
           </ul>
@@ -39,7 +39,7 @@ export function ExperienceCard({
         <div className="w-1/2 p-2">
           <h3 className="font-bold">Technologies</h3>
           <ul>
-            {experience.technicalSkills.map((point, index) => (
+            {experience.technologies.map((point, index) => (
               <li key={index}>- {point}</li>
             ))}
           </ul>

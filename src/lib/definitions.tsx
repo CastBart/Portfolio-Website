@@ -26,6 +26,6 @@ export interface ExperienceType{
   from: Date;
   to: Date | string;
   description: string;
-  technicalSkills: string[];
+  skills: string[];
   technologies: string[];
 }
