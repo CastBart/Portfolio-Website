@@ -27,27 +27,30 @@ export function ExperienceCard({
             })
           : experience.to}{" "}
       </p>
-      <div className="w-full flex flex-grow p-2">
-        <div className="w-1/2 p-2">
+      
+      <div className="w-full flex flex-grow p-2 overflow-hidden">
+        <div className="w-1/2 p-2 overflow-hidden  text-ellipsis">
           <h3 className="font-bold">Skills</h3>
-          <ul>
+          <ul className="list-outside list-disc pl-4">
             {experience.skills.map((point, index) => (
-              <li key={index}>- {point}</li>
+              <li key={index}>{point}</li>
             ))}
           </ul>
         </div>
-        <div className="w-1/2 p-2">
+        
+        <div className="w-1/2 p-2 overflow-y-auto">
           <h3 className="font-bold">Technologies</h3>
-          <ul>
+          <ul className=" list-outside list-disc pl-4">
             {experience.technologies.map((point, index) => (
-              <li key={index}>- {point}</li>
+              <li key={index}>{point}</li>
             ))}
           </ul>
         </div>
       </div>
+      
       <button
         onClick={() => onMoreClick(experience)}
-        className="bg-blue-500 text-white py-2 px-4 rounded mt-auto"
+        className="bg-blue-500 text-white py-2 px-4 rounded mt-2"
       >
         More
       </button>
