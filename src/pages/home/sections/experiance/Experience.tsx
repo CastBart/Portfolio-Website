@@ -10,7 +10,6 @@ export default function Experience(): React.ReactNode {
     useState<ExperienceType | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [animating, setAnimating] = useState(false);
-  const [visibleCards, setVisibleCards] = useState(1);
 
   const maxIndex = experienceList.length - 1;
 
@@ -49,7 +48,7 @@ export default function Experience(): React.ReactNode {
   return (
     <section
       id="experience"
-      className="min-h-screen flex flex-col items-center"
+      className="min-h-screen flex flex-col items-center justify-center"
     >
       <h1 className="text-4xl font-bold pb-10">Experience</h1>
 

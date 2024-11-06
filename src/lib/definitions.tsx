@@ -11,6 +11,7 @@ export interface Project {
   id: string;
   shotDesc: string;
   longDesc: string;
+  technologies: string[];
 }
 
 //Project Dialog

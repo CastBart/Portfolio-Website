@@ -11,9 +11,9 @@ export function ExperienceCard({
   onMoreClick,
 }: ExperienceCardProps): React.ReactNode {
   return (
-    <div className="w-[400px] h-[400px] flex flex-col items-center p-2 border border-[#413f3f] rounded-lg">
+    <div className="w-[500px] h-[400px] flex flex-col items-center p-2 border border-[#413f3f] rounded-lg">
       <h2 className="font-bold pb-2">{experience.company}</h2>
-      <p>{experience.position}</p>
+      <p className="italic">{experience.position}</p>
       <p>
         {experience.from.toLocaleDateString("en-GB", {
           month: "short",
@@ -30,7 +30,7 @@ export function ExperienceCard({
       
       <div className="w-full flex flex-grow p-2 overflow-hidden">
         <div className="w-1/2 p-2 overflow-hidden  text-ellipsis">
-          <h3 className="font-bold">Skills</h3>
+          <h3 className="font-bold text-center">Skills</h3>
           <ul className="list-outside list-disc pl-4">
             {experience.skills.map((point, index) => (
               <li key={index}>{point}</li>
@@ -39,7 +39,7 @@ export function ExperienceCard({
         </div>
         
         <div className="w-1/2 p-2 overflow-y-auto">
-          <h3 className="font-bold">Technologies</h3>
+          <h3 className="font-bold text-center">Technologies</h3>
           <ul className=" list-outside list-disc pl-4">
             {experience.technologies.map((point, index) => (
               <li key={index}>{point}</li>
