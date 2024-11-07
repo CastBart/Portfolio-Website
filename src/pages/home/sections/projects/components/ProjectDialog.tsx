@@ -13,7 +13,7 @@ export function ProjectDialog({
       onClick={onClose} // Close the dialog when clicking the background
     >
       <div
-        className="bg-[#242424] p-6 rounded-lg w-[90%] max-w-lg h-[80vh] overflow-y-auto dialog-content"
+        className="bg-[#242424] p-6 rounded-lg w-[90%] max-w-lg h-[80vh] overflow-y-auto dialog-content flex flex-col"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the dialog
       >
         {/* Display the project title */}
@@ -36,7 +36,7 @@ export function ProjectDialog({
 
         {/* Close button */}
         <button
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0 self-center"
           onClick={onClose}
         >
           Close

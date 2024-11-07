@@ -62,7 +62,7 @@ export default function Experience(): React.ReactNode {
         </button>
 
         {/* Experience Cards Container with Animation */}
-        <div className="w-[600px] lg:w-[900px] flex justify-center">
+        <div className="w-[300px] sm:w-[600px] lg:w-[900px] flex justify-center">
           <div className="relative w-[600px] overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"

@@ -16,7 +16,7 @@ export function ExperienceDialog({
       onClick={onClose}
     >
       <div
-        className="bg-[#242424] p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3"
+        className="bg-[#242424] p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3 h-[80vh] overflow-y-auto dialog-content flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         <h3 className="font-bold text-2xl">{experience.company}</h3>
@@ -43,7 +43,7 @@ export function ExperienceDialog({
         </ul>
         <button
           onClick={onClose}
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0 self-center"
         >
           Close
         </button>

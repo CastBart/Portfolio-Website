@@ -11,7 +11,7 @@ export function ExperienceCard({
   onMoreClick,
 }: ExperienceCardProps): React.ReactNode {
   return (
-    <div className="w-[500px] h-[400px] flex flex-col items-center p-2 border border-[#413f3f] rounded-lg">
+    <div className="w-[300px] sm:w-[500px] h-[400px]  flex flex-col items-center p-2 border border-[#413f3f] rounded-lg">
       <h2 className="font-bold pb-2">{experience.company}</h2>
       <p className="italic">{experience.position}</p>
       <p>
