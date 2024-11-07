@@ -11,8 +11,14 @@ export function ExperienceDialog({
   onClose,
 }: ExperienceDialogProps): React.ReactNode {
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-[60]">
-      <div className="bg-[#242424] p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3">
+    <div
+      className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-[60]"
+      onClick={onClose}
+    >
+      <div
+        className="bg-[#242424] p-8 rounded-lg w-4/5 sm:w-1/2 lg:w-1/3"
+        onClick={(e) => e.stopPropagation()}
+      >
         <h3 className="font-bold text-2xl">{experience.company}</h3>
         <p className="italic">{experience.position}</p>
         <p>
