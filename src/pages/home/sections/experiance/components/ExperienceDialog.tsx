@@ -43,7 +43,7 @@ export function ExperienceDialog({
         </ul>
         <button
           onClick={onClose}
-          className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0 self-center"
+          className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0 self-center"
         >
           Close
         </button>
