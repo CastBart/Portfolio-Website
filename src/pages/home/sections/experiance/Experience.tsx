@@ -72,7 +72,7 @@ export default function Experience(): React.ReactNode {
             >
               {experienceList.map((experience, index) => (
                 <div
-                  key={experience.company}
+                  key={index}
                   className="flex-shrink-0 w-full flex justify-center transition-opacity duration-500 ease-in-out"
                   style={{
                     opacity: index === currentIndex ? 1 : 0,

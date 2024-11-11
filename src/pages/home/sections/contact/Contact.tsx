@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
-
 export default function Contact(): React.ReactNode {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,14 +20,14 @@ export default function Contact(): React.ReactNode {
 
     emailjs
       .send(
-        import.meta.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // Service ID
-        import.meta.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // Template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        import.meta.env.NEXT_PUBLIC_EMAILJS_USER_ID || "" // User ID
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         (result) => {
