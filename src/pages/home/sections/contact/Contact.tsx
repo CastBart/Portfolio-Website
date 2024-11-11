@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
+
 export default function Contact(): React.ReactNode {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,14 +21,14 @@ export default function Contact(): React.ReactNode {
 
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // Service ID
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // Template ID
+        import.meta.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "", // Service ID
+        import.meta.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "", // Template ID
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID || "" // User ID
+        import.meta.env.NEXT_PUBLIC_EMAILJS_USER_ID || "" // User ID
       )
       .then(
         (result) => {
@@ -50,8 +51,8 @@ export default function Contact(): React.ReactNode {
     >
       <div className="flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 pb-10">Contact Me</h1>
-        <div className="contact-form">
-          <form onSubmit={sendEmail} className="flex flex-col space-y-2">
+        <div className="w-[300px] sm:w-[500px]">
+          <form onSubmit={sendEmail} className="flex flex-col space-y-3">
             <input
               type="text"
               name="name"
@@ -71,11 +72,17 @@ export default function Contact(): React.ReactNode {
             <textarea
               name="message"
               placeholder="Your Message"
+              rows={5}
               value={formData.message}
               onChange={handleChange}
               required
             />
-            <button type="submit">Send Message</button>
+            <button
+              type="submit"
+              className=" bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0"
+            >
+              Send Message
+            </button>
           </form>
           <p>{status}</p>
         </div>
