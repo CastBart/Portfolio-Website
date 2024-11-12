@@ -50,8 +50,8 @@ export default function Contact(): React.ReactNode {
     >
       <div className="flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 pb-10">Contact Me</h1>
-        <div className="w-[300px] sm:w-[500px]">
-          <form onSubmit={sendEmail} className="flex flex-col space-y-3">
+        <div className="">
+          <form onSubmit={sendEmail} className="flex flex-col space-y-3 w-[300px] sm:w-[500px]">
             <input
               type="text"
               name="name"
@@ -78,7 +78,7 @@ export default function Contact(): React.ReactNode {
             />
             <button
               type="submit"
-              className=" bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0"
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 grow-0 self-center"
             >
               Send Message
             </button>
