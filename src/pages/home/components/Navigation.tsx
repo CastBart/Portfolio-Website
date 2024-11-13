@@ -8,7 +8,7 @@ const navItems: NavBarItem[] = [
   { id: "4", href: "#contact_me", text: "Contact me" },
 ];
 
-export default function NavBar(): React.ReactNode {
+export default function Navigation(): React.ReactNode {
   const [nav, setNav] = useState(true);
   const [activeItem, setActiveItem] = useState<string>(navItems[0].href);
   const [scrollLock, setScrollLock] = useState(false); // New scroll lock state
@@ -56,7 +56,15 @@ export default function NavBar(): React.ReactNode {
 
   return (
     <nav id="nav_bar" className="nav hidden lg:block">
-      <ul>
+      <ul className="mt-16 w-max">
+        {navItems.map((item, index) => {
+          return <li key={index}>
+            <a href={item.href} className="group">
+              <span></span>
+              <span>{item.text}</span>
+            </a>
+          </li>
+        })}
       </ul>
     </nav>
   );

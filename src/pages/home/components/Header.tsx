@@ -1,4 +1,5 @@
 import React from "react";
+import Navigation from "./Navigation";
 
 export default function Header(): React.ReactNode {
   return (
@@ -9,7 +10,9 @@ export default function Header(): React.ReactNode {
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Low-Code Developer</h2>
         <p className="mt-4 max-w-xs leading-normal">I'm an aspiring Full Stack Developer</p>
+        <Navigation />
       </div>
+
     </header>
   );
 }
