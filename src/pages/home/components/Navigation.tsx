@@ -58,12 +58,28 @@ export default function Navigation(): React.ReactNode {
     <nav id="nav_bar" className="nav hidden lg:block">
       <ul className="mt-16 w-max">
         {navItems.map((item, index) => {
-          return <li key={index}>
-            <a href={item.href} className="group">
-              <span></span>
-              <span>{item.text}</span>
-            </a>
-          </li>
+          const isActive = activeItem === item.href;
+
+          return (
+            <li key={index}>
+              <a
+                href={item.href}
+                className={`group flex items-center py-3 ${
+                  isActive ? "text-[#e9e1e1]" : "text-[#5c4444]"
+                } hover:text-[#e9e1e1]`}
+                onClick={() => handleSmoothScroll(item.href)}
+              >
+                <span
+                  className={`mr-4 h-px transition-all duration-300 ${
+                    isActive
+                      ? "w-16 bg-[#e9e1e1]"
+                      : "w-8 bg-[#5c4444] group-hover:w-16 group-hover:bg-[#e9e1e1]"
+                  }`}
+                ></span>
+                <span className="text-xs font-bold uppercase">{item.text}</span>
+              </a>
+            </li>
+          );
         })}
       </ul>
     </nav>

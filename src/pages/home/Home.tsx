@@ -1,9 +1,4 @@
 import React from "react";
-import AboutMe from "./sections/aboutme/AboutMeSection";
-import NavBar from "./components/Navigation";
-import Projects from "./sections/projects/Projects";
-import Experience from "./sections/experiance/Experience";
-import Contact from "./sections/contact/contact";
 import Header from "./components/Header";
 
 export default function Home(): React.ReactNode {
