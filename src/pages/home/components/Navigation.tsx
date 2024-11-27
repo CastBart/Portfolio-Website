@@ -64,7 +64,7 @@ export default function Navigation(): React.ReactNode {
             <li key={index}>
               <a
                 href={item.href}
-                className={`group flex items-center py-3 ${
+                className={`group flex items-center py-3 navigation-font ${
                   isActive ? "text-[#e9e1e1]" : "text-[#5c4444]"
                 } hover:text-[#e9e1e1]`}
                 onClick={() => handleSmoothScroll(item.href)}
@@ -76,7 +76,7 @@ export default function Navigation(): React.ReactNode {
                       : "w-8 bg-[#5c4444] group-hover:w-16 group-hover:bg-[#e9e1e1]"
                   }`}
                 ></span>
-                <span className="text-xs font-bold uppercase">{item.text}</span>
+                <span className="text-base font-bold uppercase">{item.text}</span>
               </a>
             </li>
           );

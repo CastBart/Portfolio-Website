@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* font-family: "Teko", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-family: "Teko", sans-serif; */
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ROND" 0;
+  line-height: 1.5;
 
   color-scheme: light dark;
   color: #ffffffde;
@@ -37,6 +41,8 @@ r::-webkit-scrollbar-thumb {
 body,
 html,
 .dialog-content {
+  
+  font-family: 'Ubuntu', sans-serif;
   scrollbar-width: thin; /* Firefox */
   scrollbar-color: #888 #242424; /* Thumb and track color for Firefox */
 }
@@ -77,6 +83,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.navigation-font{
+  font-family: "Teko", sans-serif;
+}
+
 
 
 @media (prefers-color-scheme: light) {
@@ -93,24 +103,5 @@ button:focus-visible {
 }
 
 @layer utilities {
-  /* Act as a border */
-  .card-wrapper {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-700 to-slate-800;
-  }
-
-  /* Gradient */
-  .card-wrapper::before:hover {
-    background: conic-gradient(
-      rgba(244, 114, 182, 0.4) 0deg,
-      rgba(192, 132, 252, 0.4) 0deg,
-      transparent 80deg
-    );
-
-    @apply absolute left-[-25%] top-[-600%] h-[1300%] w-[150%] animate-border-spin content-[''];
-  }
-
-  /* Body */
-  .card-content {
-    @apply absolute left-[1px] top-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;
-  }
+  
 }
