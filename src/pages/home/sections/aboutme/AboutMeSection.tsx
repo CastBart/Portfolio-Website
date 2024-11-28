@@ -1,4 +1,3 @@
-import profileImage from "../../../../assets/profileImagejpg.jpg";
 
 export default function AboutMe(): React.ReactNode {
   return (
@@ -11,7 +10,7 @@ export default function AboutMe(): React.ReactNode {
           About
         </h2>
       </div>
-      <div>
+      <div className="font-Ubuntu text-xl text-[#ccc]">
         <p className="mb-4">
           With a strong foundation in full-stack development and a keen eye for
           intuitive, efficient design, I specialize in crafting web applications

@@ -59,24 +59,24 @@ export default function Navigation(): React.ReactNode {
       <ul className="mt-16 w-max">
         {navItems.map((item, index) => {
           const isActive = activeItem === item.href;
-
+          
           return (
             <li key={index}>
               <a
                 href={item.href}
-                className={`group flex items-center py-3 navigation-font ${
-                  isActive ? "text-[#e9e1e1]" : "text-[#5c4444]"
-                } hover:text-[#e9e1e1]`}
+                className={`group flex items-center py-3 ${
+                  isActive ? "text-[#ccc]" : "text-[#5c4444]"
+                } hover:text-[#ccc]`}
                 onClick={() => handleSmoothScroll(item.href)}
               >
                 <span
                   className={`mr-4 h-px transition-all duration-300 ${
                     isActive
-                      ? "w-16 bg-[#e9e1e1]"
-                      : "w-8 bg-[#5c4444] group-hover:w-16 group-hover:bg-[#e9e1e1]"
+                      ? "w-16 bg-[#ccc]"
+                      : "w-8 bg-[#5c4444] group-hover:w-16 group-hover:bg-[#ccc]"
                   }`}
                 ></span>
-                <span className="text-base font-bold uppercase">{item.text}</span>
+                <span className="font-[700] uppercase">{item.text}</span>
               </a>
             </li>
           );

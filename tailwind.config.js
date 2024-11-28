@@ -7,7 +7,9 @@ export default {
         "nav-link-shadow": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       },
       fontFamily: {
-        sans: [ "Ubuntu", "Krona One", ],
+        sans: ["Ubuntu", "sans-serif"],
+        Ubuntu:  "Ubuntu, sans-serif" ,
+        Kora_One : "Krona One, sans-serif",
       },
     },
   },
