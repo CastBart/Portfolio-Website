@@ -11,10 +11,10 @@ export default function Header(): React.ReactNode {
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
               <a href="/">Bartosz Zych</a>
             </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-[#ccc] sm:text-xl">
               Low-Code Developer
             </h2>
-            <p className="mt-4 max-w-xs leading-normal">
+            <p className="mt-4 max-w-xs text-[#ccc] leading-normal">
               I'm an aspiring Full Stack Developer
             </p>
           </div>

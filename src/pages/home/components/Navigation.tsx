@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 
 const navItems: NavBarItem[] = [
   { id: "1", href: "#about_me", text: "About me" },
-  { id: "2", href: "#projects", text: "Projects" },
   { id: "3", href: "#experience", text: "Experience" },
+  { id: "2", href: "#projects", text: "Projects" },
   { id: "4", href: "#contact_me", text: "Contact me" },
 ];
 
