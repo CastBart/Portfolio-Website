@@ -29,12 +29,28 @@ ExperienceCardProps): React.ReactNode {
       <div className="z-10 sm:col-span-6">
         <h3>
           <div>
-            <a href="https://google.com" target="_blank" className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" >
-            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+            <a
+              href="https://google.com"
+              target="_blank"
+              className="inline-flex items-baseline font-medium leading-tight hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
+            >
+              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+              <span className="text-2xl text-[#e2e2e2]">
+                {experience.position}
+              </span>
             </a>
           </div>
         </h3>
-
+        <p className="mt-2 text-base text-[#ccc]]">{experience.description}</p>
+        <ul className="mt-2 flex flex-wrap">
+          {experience.technologies.map((technology, index) => {
+            return (
+              <li className="mr-1.5 mt-2" key={index}>
+                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">{technology}</div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

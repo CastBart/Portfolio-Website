@@ -44,9 +44,12 @@ export const experienceList: ExperienceType[] = [
       "Web scraping for data collection and lead generation",
     ],
     technologies: [
-      "Unity3D and C# for AR development ",
-      "JavaScript, HTML, CSS for web development",
-      "Firebase for backend storage and data management",
+      "Unity3D",
+      "C#",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Firebase",
     ],
   },
 ];
