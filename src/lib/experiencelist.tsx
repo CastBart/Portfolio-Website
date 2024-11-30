@@ -6,6 +6,7 @@ export const experienceList: ExperienceType[] = [
     position: "Low-code Automation Developer",
     from: new Date("2023/06/01"),
     to: "Present",
+    url: "https://www.kianda.com/",
     description:
       "In my current role at Kianda Technologies, I develop and automate business workflows to enhance operational efficiency for clients. I focus on creating user-friendly interfaces with custom CSS, advanced JavaScript form functionalities, and ensuring our solutions meet each client’s branding requirements. I’ve also contributed to the company’s growth by developing standalone projects and fostering strong client relationships.",
     skills: [
@@ -22,6 +23,7 @@ export const experienceList: ExperienceType[] = [
     position: "Software Development Trainer/Technical Writer",
     from: new Date("2022/07/01"),
     to: new Date("2023/06/01"),
+    url: "https://www.kianda.com/",
     description:
       "As a Software Development Trainer and Technical Writer, I created technical training materials, online courses, and detailed documentation to improve user understanding of Kianda’s low-code platform. Collaborating closely with the R&D team, I helped produce product documentation and conducted system testing to ensure high-quality releases for users and stakeholders.",
     skills: [
@@ -29,15 +31,16 @@ export const experienceList: ExperienceType[] = [
       "Writing technical documentation for diverse audiences",
       "Collaborating with R&D on case studies and system testing",
     ],
-    technologies: ["Kianda platform", "Markdown"],
+    technologies: ["REST API", "SQL", "Kianda platform", "Markdown", "Technical Writing", "Video Editor"],
   },
   {
     company: "Web Suitors",
     position: "Software Developer ",
     from: new Date("2018/04/01"),
     to: new Date("2018/07/1"),
+    url: "https://www.setu.ie/",
     description:
-      "At Web Suitors, I designed and developed augmented reality (AR) applications, which I deployed to Android and iOS platforms to improve user engagement. I also led a web scraping project that gathered valuable client data for marketing, and contributed to website development using web technologies.",
+      "My college (Institute of Technology Carlow) established a company Web Suitors for students to complete their work experience. During my time there, I designed and developed augmented reality (AR) applications, which I deployed to Android and iOS platforms to improve user engagement. I also led a web scraping project that gathered valuable client data for marketing, and contributed to website development using web technologies.",
     skills: [
       "AR application design and development",
       "Mobile deployment for Android and iOS",

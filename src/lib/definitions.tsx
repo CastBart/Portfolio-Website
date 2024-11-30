@@ -26,6 +26,7 @@ export interface ExperienceType{
   position: string;
   from: Date;
   to: Date | string;
+  url: string;
   description: string;
   skills: string[];
   technologies: string[];

@@ -29,7 +29,7 @@ ExperienceCardProps): React.ReactNode {
         <h3>
           <div>
             <a
-              href="https://google.com"
+              href={experience.url}
               target="_blank"
               className="inline-flex items-baseline font-medium leading-tight hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
             >
