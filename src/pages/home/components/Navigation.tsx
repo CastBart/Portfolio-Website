@@ -17,7 +17,8 @@ export default function Navigation(): React.ReactNode {
     setNav(!nav);
   }
 
-  function handleSmoothScroll(href: string) {
+  function handleSmoothScroll(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    event.preventDefault(); // Prevent the default anchor behavior
     setActiveItem(href); // Set the clicked item as active immediately
     setScrollLock(true); // Lock scroll updates
     const targetElement = document.querySelector(href);
@@ -67,7 +68,7 @@ export default function Navigation(): React.ReactNode {
                 className={`group flex items-center py-3 ${
                   isActive ? "text-[#ccc]" : "text-[#5c4444]"
                 } hover:text-[#ccc]`}
-                onClick={() => handleSmoothScroll(item.href)}
+                onClick={(e) => handleSmoothScroll(e, item.href)}
               >
                 <span
                   className={`mr-4 h-px transition-all duration-300 ${
