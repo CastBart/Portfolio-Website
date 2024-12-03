@@ -1,5 +1,6 @@
 import React from "react";
 import { Project } from "../../../../../lib/definitions"; // Import your Project type
+import URLArrow from "../../../../../ui/URLArrow";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,9 +23,7 @@ ProjectCardProps): React.ReactNode {
               className="inline-flex items-baseline font-medium leading-tight hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-              <span className="text-2xl text-[#e2e2e2]">
-                {project.title}
-              </span>
+              <URLArrow text={project.title}/>
             </a>
           </div>
         </h3>

@@ -33,3 +33,11 @@ export interface ExperienceType{
   skills: string[];
   technologies: string[];
 }
+
+// SVG Interface
+export interface SVGProps extends React.SVGProps<SVGSVGElement> {
+  width?: string;
+  height?: string;
+  fill?: string;
+  className?: string;
+}
