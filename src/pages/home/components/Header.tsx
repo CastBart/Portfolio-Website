@@ -43,8 +43,9 @@ export default function Header(): React.ReactNode {
             href="https://www.linkedin.com/in/bartosz-zych-043156135/"
             target="_blank"
             rel="noopener noreferrer"
+            title="Visit my LinkedIn"
           >
-            <span className="sr-only">test</span>
+            <span className="sr-only">LinkedIn</span>
             <LinkedInIcon />
           </a>
         </li>
@@ -54,8 +55,9 @@ export default function Header(): React.ReactNode {
             href="https://github.com/CastBart"
             target="_blank"
             rel="noopener noreferrer"
+            title="Visit my GitHub"
           >
-            <span className="sr-only">test</span>
+            <span className="sr-only">GitHub</span>
             <GitHubIcon />
           </a>
         </li>
@@ -65,8 +67,9 @@ export default function Header(): React.ReactNode {
             href="https://www.instagram.com/bartek.fitness/"
             target="_blank"
             rel="noopener noreferrer"
+            title="Visit my Instagram"
           >
-            <span className="sr-only">test</span>
+            <span className="sr-only">Instagram</span>
             <InstagramIcon />
           </a>
         </li>
@@ -76,8 +79,9 @@ export default function Header(): React.ReactNode {
             href="mailto:bartosz.j.zych@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            title="Contact me through email"
           >
-            <span className="sr-only">test</span>
+            <span className="sr-only">Email Address</span>
             <GmailIcon />
           </a>
         </li>
