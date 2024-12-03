@@ -34,38 +34,54 @@ export default function Header(): React.ReactNode {
         </div>
         {/* Navigation */}
         <Navigation />
-        {/* Social Media */}
-        <ul className="ml-1 mt-8 flex items-center">
-          {/* LinkedIn */}
-          <li className="mr-5 shrink-0 text-xs">
-            <a href="https://www.linkedin.com/in/bartosz-zych-043156135/" target="_blank" rel="noopener noreferrer">
-              <span className="sr-only">test</span>
-              <LinkedInIcon />
-            </a>
-          </li>
-          {/* Github */}
-          <li className="mr-5 shrink-0 text-xs">
-            <a href="https://github.com/CastBart" target="_blank" rel="noopener noreferrer">
-              <span className="sr-only">test</span>
-              <GitHubIcon />
-            </a>
-          </li>
-          {/* Instagram */}
-          <li className="mr-5 shrink-0 text-xs">
-            <a href="https://www.instagram.com/bartek.fitness/" target="_blank" rel="noopener noreferrer">
-              <span className="sr-only">test</span>
-              <InstagramIcon />
-            </a>
-          </li>
-          {/* Gamil */}
-          <li className="mr-5 shrink-0 text-xs">
-            <a href="mailto:bartosz.j.zych@gmail.com" target="_blank" rel="noopener noreferrer">
-              <span className="sr-only">test</span>
-              <GmailIcon />
-            </a>
-          </li>
-        </ul>
       </div>
+      {/* Social Media */}
+      <ul className="ml-1 mt-8 flex items-center">
+        {/* LinkedIn */}
+        <li className="mr-5 shrink-0 text-xs">
+          <a
+            href="https://www.linkedin.com/in/bartosz-zych-043156135/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">test</span>
+            <LinkedInIcon />
+          </a>
+        </li>
+        {/* Github */}
+        <li className="mr-5 shrink-0 text-xs">
+          <a
+            href="https://github.com/CastBart"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">test</span>
+            <GitHubIcon />
+          </a>
+        </li>
+        {/* Instagram */}
+        <li className="mr-5 shrink-0 text-xs">
+          <a
+            href="https://www.instagram.com/bartek.fitness/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">test</span>
+            <InstagramIcon />
+          </a>
+        </li>
+        {/* Gamil */}
+        <li className="mr-5 shrink-0 text-xs">
+          <a
+            href="mailto:bartosz.j.zych@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="sr-only">test</span>
+            <GmailIcon />
+          </a>
+        </li>
+      </ul>
     </header>
   );
 }
