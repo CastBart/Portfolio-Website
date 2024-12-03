@@ -2,18 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Bartosz Zych - Portfolio</title>
+    <meta name="description" content="Portfolio website of Bartosz Zych, showcasing web development projects and skills." />
+    <meta name="author" content="Bartosz Zych" />
+    <meta name="keywords" content="Bartosz Zych, Web Developer, Portfolio, Projects, JavaScript, TypeScript, React, Next.js" />
+    <meta property="og:title" content="Bartosz Zych - Portfolio" />
+    <meta property="og:description" content="Explore my web development projects, games, and portfolio." />
+    <meta property="og:image" content="path/to/preview-image.png" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Doto&family=Teko:wght@300..700&display=swap" as="style" />
     <link
       href="https://fonts.googleapis.com/css2?family=Doto&family=Teko:wght@300..700&display=swap"
       rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <title>Bartosz Zych</title>
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Doto&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="icon" href="/vite.svg" sizes="any" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0d0d0d" />
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <strong>This website requires JavaScript to function properly. Please enable JavaScript in your browser.</strong>
+    </noscript>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>
