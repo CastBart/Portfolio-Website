@@ -8,13 +8,10 @@ const navItems: NavBarItem[] = [
 ];
 
 export default function Navigation(): React.ReactNode {
-  const [nav, setNav] = useState(true);
   const [activeItem, setActiveItem] = useState<string>(navItems[0].href);
   const [scrollLock, setScrollLock] = useState(false); // New scroll lock state
 
-  function handleNav() {
-    setNav(!nav);
-  }
+
 
   function handleSmoothScroll(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
     event.preventDefault(); // Prevent the default anchor behavior
