@@ -4,7 +4,7 @@ import tailwindcss from 'tailwindcss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Portfolio-Website/', // Replace with your repository name
+  base: '/castbart.github.io/', // Replace with your repository name
   plugins: [react()],
   css:{
     postcss: {
