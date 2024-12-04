@@ -10,7 +10,7 @@ export default function Header(): React.ReactNode {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           {/* Title Section */}
           <div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -24,7 +24,7 @@ export default function Header(): React.ReactNode {
             </p>
           </div>
           {/* Profile Image */}
-          <div className="flex justify-center grow">
+          <div className="flex justify-start mt-4 md:justify-center md:mt-0 grow">
             <img
               className="rounded-full shadow-sm shadow-[#ccc] h-[128px]"
               src={profileImage}
