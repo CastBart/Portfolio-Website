@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://castbart.github.io/Portfolio-Website/",
   "description": "Personal Portfolio Website",
   "author": {
     "email": "bartosz.j.zych@gmail.com",
@@ -12,7 +13,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/krona-one": "^5.1.0",
@@ -31,6 +34,7 @@
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.2.0",
     "globals": "^15.9.0",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
