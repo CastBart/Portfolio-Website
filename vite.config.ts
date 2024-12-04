@@ -1,17 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import tailwindcss from 'tailwindcss';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/castbart.github.io/', // Replace with your repository name
+  base: '/Portfolio-Website/', // Adjust to match your GitHub repository name
   plugins: [react()],
-  css:{
+  css: {
     postcss: {
-      plugins:[tailwindcss()],
-    }
+      plugins: [tailwindcss()],
+    },
   },
   build: {
-    outDir: 'dist',
+    outDir: 'dist', // Ensure this points to the correct build folder
   },
-})
+});
