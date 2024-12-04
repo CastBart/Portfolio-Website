@@ -1,4 +1,8 @@
 import { Project } from "./definitions";
+import bfitImage from "../assets/images/bfit-preview.png";
+import zychFurnitureImage from "../assets/images/zychfurniture-preview.png";
+import bartFitnessImage from "../assets/images/bartfitness-preview.png";
+
 
 export const projects: Project[] = [
   {
@@ -17,7 +21,7 @@ export const projects: Project[] = [
       "Moment.js",
       "TypeScript",
     ],
-    imgURL: "/images/bfit-preview.png",
+    imgURL: bfitImage,
     siteURL: "https://b-fit-xi.vercel.app/",
   },
   {
@@ -33,7 +37,7 @@ export const projects: Project[] = [
       "Firebase",
       "Formik",
     ],
-    imgURL: "/images/zychfurniture-preview.png",
+    imgURL: zychFurnitureImage,
     siteURL: "https://zych-furniture.vercel.app/",
   },
   {
@@ -48,7 +52,7 @@ export const projects: Project[] = [
       "Formik",
       "CSS Modules",
     ],
-    imgURL: "/images/bartfitness-preview.png",
+    imgURL: bartFitnessImage,
     siteURL: "https://bart-fitness.vercel.app/home",
   },
 ];
