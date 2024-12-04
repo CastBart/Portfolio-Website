@@ -1,7 +1,7 @@
 import { Project } from "./definitions";
-import bfitImage from "../assets/images/bfit-preview.png";
-import zychFurnitureImage from "../assets/images/zychfurniture-preview.png";
-import bartFitnessImage from "../assets/images/bartfitness-preview.png";
+import bfitImage from "../../public/images/bfit-preview.png";
+import zychFurnitureImage from "../../public/images/zychfurniture-preview.png
+import bartFitnessImage from "../../public/images/bartfitness-preview.png";
 
 
 export const projects: Project[] = [
